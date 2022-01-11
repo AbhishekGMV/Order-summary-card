@@ -1,0 +1,161 @@
+:root {
+  --h1-font-clr: hsl(222.5, 47%, 22.9%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --light-blue: hsl(245, 75%, 65%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+h1 {
+  color: var(--h1-font-clr);
+}
+
+h4 {
+  color: var(--h1-font-clr);
+  font-weight: 900;
+}
+
+p {
+  color: var(--desaturated-blue);
+}
+
+a {
+  color: hsl(245, 75%, 52%);
+  font-weight: bold;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(225, 100%, 94%);
+  font-family: "Red Hat Display", sans-serif;
+  /* line-height: 1.5; */
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  /* border: 3px solid red; */
+  margin: auto;
+  width: 450px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white;
+  border-radius: 18px;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 100%;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.card-body {
+  padding: 3rem;
+  text-align: center;
+}
+
+.card-body p :first-child {
+  padding: 1rem;
+}
+
+.card h1 {
+  padding: 0 1rem;
+}
+
+.plan {
+  background-color: hsl(225, 100%, 98%);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+.plan a {
+  margin-left: auto;
+}
+
+.plan-label {
+  margin-left: 15px;
+  text-align: justify;
+}
+
+.plan-label h4 {
+  margin-bottom: 5px;
+}
+
+.btn,
+.btn:active {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #3829e0;
+  box-shadow: 0 5px 20px var(--light-blue);
+  padding: 1rem 0;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--light-blue);
+}
+
+.btn-secondary {
+  padding: 1rem 0;
+  color: var(--desaturated-blue);
+  background: none;
+}
+
+.attribution {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.attribution a {
+  color: #0166cc;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: cover;
+  }
+
+  .card {
+    width: 90vw;
+    max-width: 330px;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  .card-body > h1 {
+    font-size: 25px;
+  }
+
+  .card-body > p {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .plan {
+    font-size: 12px;
+  }
+}
